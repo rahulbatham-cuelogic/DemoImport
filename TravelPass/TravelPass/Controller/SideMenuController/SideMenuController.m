@@ -32,38 +32,38 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark - Instance Methods
--(void)setMenuViewControllerFromListObject:(SideMenuModel*)objMenu{
+- (void)setMenuViewControllerFromListObject:(SideMenuModel*)objMenu {
     [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
     UIViewController *controller;
     switch (objMenu.enmMenus) {
-        case HOTEL:
+        case HOTEL_ENM:
         {
-            controller = K_INTANTIATE_HOTELSTORYBOARD(K_STORYBOARD_HOTELCONTROLLER);
+            controller = INTANTIATE_HOTELSTORYBOARD(STORYBOARD_HOTELCONTROLLER);
         }
             break;
         case ITINERARY:
         {
-            controller = K_INTANTIATE_ITINARARYSTORYBOARD(K_STORYBOARD_ITINARARYCONTROLLER);
+            controller = INTANTIATE_ITINARARYSTORYBOARD(STORYBOARD_ITINARARYCONTROLLER);
         }
             break;
         case FAVORITES:
         {
-            controller = K_INTANTIATE_FAVOURITESTORYBOARD(K_STORYBOARD_FAVOURITESCONTROLLER);
+            controller = INTANTIATE_FAVOURITESTORYBOARD(STORYBOARD_FAVOURITESCONTROLLER);
         }
             break;
         case MESSAGES:
         {
-            controller = K_INTANTIATE_MESSAGESTORYBOARD(K_STORYBOARD_MESSAGECONTROLLER);
+            controller = INTANTIATE_MESSAGESTORYBOARD(STORYBOARD_MESSAGECONTROLLER);
         }
             break;
-        case CONTACTSUPPORT:
+        case CONTACTSUPPORT_ENM:
         {
             return;
         }
             break;
-        case PROFILE:
+        case PROFILE_ENM:
         {
-            controller = K_INTANTIATE_PROFILESTORYBOARD(K_STORYBOARD_PROFILECONTROLLER);
+            controller = INTANTIATE_PROFILESTORYBOARD(STORYBOARD_PROFILECONTROLLER);
         }
             break;
         default:
@@ -89,7 +89,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    SideMenuModel *sideMenu = [arrMenus objectAtIndex:indexPath.row];
     [self setMenuViewControllerFromListObject:sideMenu];
 }

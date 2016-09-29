@@ -32,8 +32,8 @@
  * Will set side menu as root view controller
  */
 -(void)setSideMenuViewAsRootViewContoller{
-    UINavigationController *navigationController =[[UINavigationController alloc]initWithRootViewController:K_INTANTIATE_HOTELSTORYBOARD(K_STORYBOARD_HOTELCONTROLLER)];
-    SideMenuController *leftMenuViewController = K_INTANTIATE_MAINSTORYBOARD(K_STORYBOARD_SIDEMENUCONTROLLER);
+    UINavigationController *navigationController =[[UINavigationController alloc]initWithRootViewController:INTANTIATE_HOTELSTORYBOARD(STORYBOARD_HOTELCONTROLLER)];
+    SideMenuController *leftMenuViewController = INTANTIATE_MAINSTORYBOARD(STORYBOARD_SIDEMENUCONTROLLER);
     MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
                                                     containerWithCenterViewController:navigationController
                                                     leftMenuViewController:leftMenuViewController
@@ -44,7 +44,7 @@
  * Will set SignUp as root view controller
  */
 -(void)setSignUpViewAsRootViewController{
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController: K_INTANTIATE_MAINSTORYBOARD(K_STORYBOARD_SIGNUPCONTROLLER)];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController: INTANTIATE_MAINSTORYBOARD(STORYBOARD_SIGNUPCONTROLLER)];
     self.window.rootViewController = navigationController;
 }
 #pragma mark - Application delegates

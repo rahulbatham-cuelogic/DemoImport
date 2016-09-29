@@ -9,5 +9,5 @@
 #ifndef UserDefaultsConstant_h
 #define UserDefaultsConstant_h
 
-#define K_USERDEFAULT_ISLOGGEDIN @"isloggedin"
+#define USERDEFAULT_ISLOGGEDIN @"isloggedin"
 #endif /* UserDefaultsConstant_h */

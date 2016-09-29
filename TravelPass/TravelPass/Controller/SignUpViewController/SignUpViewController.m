@@ -26,7 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doThisLater:(id)sender {
-    [K_APPDELEGATE setSideMenuViewAsRootViewContoller]; // will skip this screen and navigate to side menus
+    [APPDELEGATE setSideMenuViewAsRootViewContoller]; // will skip this screen and navigate to side menus
 }
 
 /*

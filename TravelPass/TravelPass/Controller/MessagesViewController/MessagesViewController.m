@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupMenuBarButtonItems]; // will show the left menu bar button to open the side menu
-    [self setNavigationHeaderTitle:K_MESSAGES_TITLE];
+    [self setNavigationHeaderTitle:MESSAGES_TITLE];
 }
 
 - (void)didReceiveMemoryWarning {

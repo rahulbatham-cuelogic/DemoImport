@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 enum menus{
-    HOTEL,
+    HOTEL_ENM,
     ITINERARY,
     FAVORITES,
     MESSAGES,
-    PROFILE,
-    CONTACTSUPPORT
+    PROFILE_ENM,
+    CONTACTSUPPORT_ENM
 };
 @interface SideMenuModel : NSObject
 @property(nonatomic,strong)NSString *strTitle; /**< will hold the title name on side menu*/
@@ -21,5 +21,5 @@ enum menus{
 @property(nonatomic,assign)BOOL isHide; /**< will decide if title should be visible or not on side menu */
 @property(nonatomic,assign)enum menus enmMenus; /**< will decide if title should be visible or not on side menu */
 
--(id)initWithTitle:(NSString *)strTitle andIconName:(NSString *)strIconName andMenus:(enum menus)enmMenus andIsHide:(BOOL)isHide; /**< method used to intiate the object with variable values */
+- (id)initWithTitle:(NSString *)strTitle andIconName:(NSString *)strIconName andMenus:(enum menus)enmMenus andIsHide:(BOOL)isHide; /**< method used to intiate the object with variable values */
 @end

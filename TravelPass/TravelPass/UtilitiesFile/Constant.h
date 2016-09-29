@@ -9,13 +9,13 @@
 #ifndef Constant_h
 #define Constant_h
 
-#define K_APPDELEGATE (AppDelegate*)[UIApplication sharedApplication].delegate
+#define APPDELEGATE (AppDelegate*)[UIApplication sharedApplication].delegate
 
 // Header titles
-#define K_HOTEL_TITLE @"Travel Pass"
-#define K_ITINERARY_TITLE @"Itinerary"
-#define K_MESSAGES_TITLE @"Messages"
-#define K_PRICEDROP_TITLE @"Price Drop"
-#define K_FAVORITES_TITLE @"Favorites"
-#define K_PROFILE_TITLE @"Profile"
+#define HOTEL_TITLE @"Travel Pass"
+#define ITINERARY_TITLE @"Itinerary"
+#define MESSAGES_TITLE @"Messages"
+#define PRICEDROP_TITLE @"Price Drop"
+#define FAVORITES_TITLE @"Favorites"
+#define PROFILE_TITLE @"Profile"
 #endif /* Constant_h */

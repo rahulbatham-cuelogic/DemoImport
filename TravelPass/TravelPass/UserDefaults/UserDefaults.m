@@ -10,26 +10,20 @@
 
 @implementation UserDefaults
 /**
- * will return value wheather logged in or not 
+ * will return value wheather logged in or not
  */
-+(BOOL)isLoggedIn{
-    NSUInteger value = [[[NSUserDefaults standardUserDefaults] objectForKey:K_USERDEFAULT_ISLOGGEDIN] integerValue];
-    if (value) {
-        return YES;
-    }
-    else{
-        return NO;
-    }
++ (BOOL)isLoggedIn {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:USERDEFAULT_ISLOGGEDIN];
 }
 /**
- * sets login value as 1 for login and 0 for not logged in 
+ * sets login value as 1 for login and 0 for not logged in
  */
-+(void)setLoggedIn:(BOOL)isLogin{
++( void)setLoggedIn:(BOOL)isLogin {
     if (isLogin) {
-        [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:K_USERDEFAULT_ISLOGGEDIN];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:USERDEFAULT_ISLOGGEDIN];
     }
     else{
-        [[NSUserDefaults standardUserDefaults] setObject:@0 forKey:K_USERDEFAULT_ISLOGGEDIN];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:USERDEFAULT_ISLOGGEDIN];
     }
 }
 @end
