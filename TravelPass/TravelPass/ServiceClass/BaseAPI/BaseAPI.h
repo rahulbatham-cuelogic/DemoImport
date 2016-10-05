@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface BaseAPI : NSObject
-
++ (NSMutableURLRequest*)createAPIRequestWithMethod:(NSString *)strMethodType andURL:(NSURL*)url;
 @end

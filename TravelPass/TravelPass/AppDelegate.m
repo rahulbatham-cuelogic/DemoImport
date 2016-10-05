@@ -47,6 +47,14 @@
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController: INTANTIATE_MAINSTORYBOARD(STORYBOARD_SIGNUPCONTROLLER)];
     self.window.rootViewController = navigationController;
 }
+
+#pragma mark - ProgressHUD
+- (void)showProgressHUDInView:(UIView*)containerV {
+   [MBProgressHUD showHUDAddedTo:containerV animated:YES];
+}
+- (void)hideProgresshHUDInView:(UIView*)containerV {
+    [MBProgressHUD hideHUDForView:containerV animated:YES];
+}
 #pragma mark - Application delegates
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -78,6 +86,8 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    [UserDefaults setIsHotelListAvailable:NO];
+    [UserDefaults setHotelLocationSearch:@""];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     //[self saveContext];

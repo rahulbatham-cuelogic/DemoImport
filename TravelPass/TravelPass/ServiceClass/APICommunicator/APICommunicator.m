@@ -8,54 +8,36 @@
 
 #import "APICommunicator.h"
 #import "Reachability.h"
-
+#import "BaseAPI.h"
 @interface APICommunicator()
 @property (nonatomic) Reachability *internetReachability;
 @end
 @implementation APICommunicator
 
-+(void)callGetMethod{
-    NSError *error;
-    
++ (NSURLSessionDataTask*)callGetMethodWithParams:(NSString *)strParams andResponse:(void (^)(id response, NSError *error))responseBlock {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:nil delegateQueue:nil];
-    NSURL *url = [NSURL URLWithString:@"[JSON SERVER"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:60.0];
-    
-    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    [request setHTTPMethod:@"POST"];
-    NSDictionary *mapData = [[NSDictionary alloc] initWithObjectsAndKeys: @"TEST IOS", @"name",
-                             @"IOS TYPE", @"typemap",
-                             nil];
-    NSData *postData = [NSJSONSerialization dataWithJSONObject:mapData options:0 error:&error];
-    [request setHTTPBody:postData];
-    
-    
+    NSURL *url = [NSURL URLWithString:strParams];
+    NSMutableURLRequest *request = [BaseAPI createAPIRequestWithMethod:@"GET" andURL:url];
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        
+            responseBlock(data,error);
     }];
-    
     [postDataTask resume];
+    return postDataTask;
 }
--(void)checkInternet{
+- (void)checkInternet {
     self.internetReachability = [Reachability reachabilityForInternetConnection];
     [self.internetReachability startNotifier];
     [self updateInterfaceWithReachability:self.internetReachability];
 }
-- (void)updateInterfaceWithReachability:(Reachability *)reachability
-{
+- (void)updateInterfaceWithReachability:(Reachability *)reachability {
     if (reachability == self.internetReachability)
     {
         [self configurereachability:reachability];
     }
     
 }
-- (void)configurereachability:(Reachability *)reachability
-{
+- (void)configurereachability:(Reachability *)reachability {
     NetworkStatus netStatus = [reachability currentReachabilityStatus];
     BOOL connectionRequired = [reachability connectionRequired];
     NSString* statusString = @"";

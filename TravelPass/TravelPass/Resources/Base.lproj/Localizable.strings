@@ -8,13 +8,15 @@
 
 // FOR SIGNUP SCREEN
 "WELCOME_TO_TRAVELPASS!" = "Welcome to TravelPass!";
-"WELCOME_NOTE" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+"WELCOME_NOTE" = "The best deals on the most hotels worldwide. We even search for lower rates after you book to try and save you even more. Book today!";
 "SIGNUP" = "SIGN UP";
 "WITH_SOCIAL_MEDIA" = "with social media";
 "OR" = "or";
 "CONTINUE" = "CONTINUE";
 "DO THIS LATER" = "Do this later";
 "SIGNIN" = "Sign in";
+"EMAIL" = "email";
+"PASSWORD" = "password";
 
 // FOR SIDE MENUS
 "HOTELS" = "Hotels";

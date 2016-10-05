@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface APICommunicator : NSObject
-+(void)callGetMethod;
++ (NSURLSessionDataTask*)callGetMethodWithParams:(NSString *)strParams andResponse:(void (^)(id response, NSError *error))responseBlock ;
 @end

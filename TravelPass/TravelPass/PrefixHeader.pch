@@ -15,6 +15,5 @@
 #import "Constant.h"
 #import "Alert.h"
 #import "APIConstant.h"
-#import "SideMenuConstant.h"
 #import "UserDefaultsConstant.h"
 #endif /* PrefixHeader_pch */

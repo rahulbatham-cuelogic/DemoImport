@@ -10,4 +10,6 @@
 #define UserDefaultsConstant_h
 
 #define USERDEFAULT_ISLOGGEDIN @"isloggedin"
+#define USERDEFAULT_LOCATIONCRITERIA @"LocationCriteria"
+#define USERDEFAULT_ISHOTELLISTLOADED @"ishotellistloaded"
 #endif /* UserDefaultsConstant_h */

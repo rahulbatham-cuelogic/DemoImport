@@ -11,6 +11,7 @@
 #import "SideMenuModel.h"
 #import "MenuCell.h"
 #import "MFSideMenu.h"
+#import "Utility.h"
 
 @interface SideMenuController ()
 {
@@ -85,6 +86,7 @@
     MenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuCellID" forIndexPath:indexPath];
     SideMenuModel *objMenu = [arrMenus objectAtIndex:indexPath.row];
     cell.lblMenuTitles.text = objMenu.strTitle;
+    cell.lblMenuTitles.font = [cell.lblMenuTitles.font fontWithSize:cell.lblMenuTitles.font.pointSize*fontScale];
     [cell.imgMenuIcons setImage:[UIImage imageNamed:objMenu.strIconName]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
