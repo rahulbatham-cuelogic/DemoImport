@@ -29,7 +29,6 @@
     [super viewDidLoad];
     arrLocations = [[NSArray alloc]init];
     objSearchAPI = [[HotelSearchAPI alloc]init];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,9 +97,7 @@
 }
 - (BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
-replacementString:(NSString *)string {
-    //tblVLocationList.hidden = NO;
-    
+replacementString:(NSString *)string {    
     NSString *substring = [NSString stringWithString:textField.text];
     substring = [substring
                  stringByReplacingCharactersInRange:range withString:string];
@@ -119,14 +116,4 @@ replacementString:(NSString *)string {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self showLabelWithString:[arrLocations objectAtIndex:indexPath.row] andIsShowLabel:YES];
 }
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
 @end

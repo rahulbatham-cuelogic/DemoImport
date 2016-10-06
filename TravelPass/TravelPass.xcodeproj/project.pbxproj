@@ -10,6 +10,9 @@
 		267A23DA1A257611F146EF70 /* libPods-TravelPassUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C0886329B2CDDFA9E3CBE4 /* libPods-TravelPassUITests.a */; };
 		4696211E734720B7A6E7D4C5 /* libPods-TravelPassTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E856505AF906F081DD1610 /* libPods-TravelPassTests.a */; };
 		BCC5B4DB11370EC5120B4188 /* libPods-TravelPass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B32FB77E2A6EEB75F0BCDA9 /* libPods-TravelPass.a */; };
+		EE2AABEB1DA52296006E58D2 /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2AABEA1DA52296006E58D2 /* Messages.m */; };
+		EE2AABEF1DA54C48006E58D2 /* Paging.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2AABEE1DA54C48006E58D2 /* Paging.m */; };
+		EE2AABF31DA55576006E58D2 /* LoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2AABF21DA55576006E58D2 /* LoadMoreCell.m */; };
 		EE3C807E1D9B9D940034269F /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C807D1D9B9D940034269F /* UserDefaults.m */; };
 		EE4767D21D8C1FEA00DE4D5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4767D11D8C1FEA00DE4D5B /* main.m */; };
 		EE4767D51D8C1FEA00DE4D5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4767D41D8C1FEA00DE4D5B /* AppDelegate.m */; };
@@ -19,7 +22,6 @@
 		EE484E051D9CF0B300249ECD /* DataBaseConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EE484E041D9CF0B300249ECD /* DataBaseConfiguration.m */; };
 		EE5AA3311D9A7A9A0098D596 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3301D9A7A9A0098D596 /* SignUpViewController.m */; };
 		EE5AA3341D9A7AAA0098D596 /* HotelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3331D9A7AAA0098D596 /* HotelsViewController.m */; };
-		EE5AA3371D9A7ABE0098D596 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3361D9A7ABE0098D596 /* ContactViewController.m */; };
 		EE5AA33A1D9A7AD00098D596 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3391D9A7AD00098D596 /* ProfileViewController.m */; };
 		EE5AA33E1D9A7AEB0098D596 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA33D1D9A7AEB0098D596 /* MessagesViewController.m */; };
 		EE5AA3411D9A7AFC0098D596 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3401D9A7AFC0098D596 /* FavouritesViewController.m */; };
@@ -31,12 +33,19 @@
 		EE5AA3531D9A7FCE0098D596 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3521D9A7FCE0098D596 /* MenuCell.m */; };
 		EE5AA3571D9A8A110098D596 /* SideMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA3561D9A8A110098D596 /* SideMenuModel.m */; };
 		EE5AA35B1D9A8BD20098D596 /* SideMenuConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5AA35A1D9A8BD20098D596 /* SideMenuConfiguration.m */; };
+		EE6757FA1DA23FDF004B8624 /* TPError.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6757F91DA23FDF004B8624 /* TPError.m */; };
+		EE6757FD1DA2400A004B8624 /* HotelSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6757FC1DA2400A004B8624 /* HotelSearchResult.m */; };
+		EE6758001DA2403F004B8624 /* HotelSearchRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6757FF1DA2403F004B8624 /* HotelSearchRequestData.m */; };
+		EE6758061DA24180004B8624 /* HotelSearchAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6758051DA24180004B8624 /* HotelSearchAPI.m */; };
+		EE67580A1DA26FE4004B8624 /* HotelSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6758091DA26FE4004B8624 /* HotelSearchViewController.m */; };
 		EEAD07671D990EFB0006447F /* TravelPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEAD07651D990EFB0006447F /* TravelPass.xcdatamodeld */; };
 		EEAD076F1D9912260006447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD076D1D9912260006447F /* LaunchScreen.storyboard */; };
 		EEAD07701D9912260006447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD076E1D9912260006447F /* Main.storyboard */; };
 		EEAD07721D9912560006447F /* Hotel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD07711D9912560006447F /* Hotel.storyboard */; };
 		EEAD07791D991EB20006447F /* UIViewController+CustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD07781D991EB20006447F /* UIViewController+CustomVC.m */; };
+		EECD3FB11D9D4E0300C66562 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EECD3FB31D9D4E0300C66562 /* Localizable.strings */; };
 		EEDBB7C91D95455400CF92D5 /* SideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDBB7C81D95455400CF92D5 /* SideMenuController.m */; };
+		EEE7CD9C1DA3A8BA008ED235 /* HotelListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE7CD9B1DA3A8BA008ED235 /* HotelListCell.m */; };
 		EEFE19121D95124800C12B43 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE19111D95124800C12B43 /* Utility.m */; };
 		EEFE19261D9512FF00C12B43 /* APICommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE191F1D9512FF00C12B43 /* APICommunicator.m */; };
 		EEFE19271D9512FF00C12B43 /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE19221D9512FF00C12B43 /* BaseAPI.m */; };
@@ -70,6 +79,12 @@
 		E0E856505AF906F081DD1610 /* libPods-TravelPassTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelPassTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32616E4927B71BD44829DEE /* Pods-TravelPassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelPassTests/Pods-TravelPassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C147F36D84AB319B2CC4EB /* Pods-TravelPassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPassUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelPassUITests/Pods-TravelPassUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE2AABE91DA52296006E58D2 /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Messages.h; path = UtilitiesFile/Messages/Messages.h; sourceTree = "<group>"; };
+		EE2AABEA1DA52296006E58D2 /* Messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Messages.m; path = UtilitiesFile/Messages/Messages.m; sourceTree = "<group>"; };
+		EE2AABED1DA54C48006E58D2 /* Paging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paging.h; path = Model/Paging/Paging.h; sourceTree = "<group>"; };
+		EE2AABEE1DA54C48006E58D2 /* Paging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paging.m; path = Model/Paging/Paging.m; sourceTree = "<group>"; };
+		EE2AABF11DA55576006E58D2 /* LoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadMoreCell.h; path = Controller/HotelsViewController/LoadMoreCell/LoadMoreCell.h; sourceTree = "<group>"; };
+		EE2AABF21DA55576006E58D2 /* LoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadMoreCell.m; path = Controller/HotelsViewController/LoadMoreCell/LoadMoreCell.m; sourceTree = "<group>"; };
 		EE3C807C1D9B9D940034269F /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDefaults.h; path = UserDefaults/UserDefaults.h; sourceTree = "<group>"; };
 		EE3C807D1D9B9D940034269F /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDefaults.m; path = UserDefaults/UserDefaults.m; sourceTree = "<group>"; };
 		EE3C807F1D9B9E010034269F /* UserDefaultsConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserDefaultsConstant.h; path = UtilitiesFile/UserDefaultsConstant.h; sourceTree = "<group>"; };
@@ -105,8 +120,6 @@
 		EE5AA3301D9A7A9A0098D596 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = Controller/SignUpViewController/SignUpViewController.m; sourceTree = "<group>"; };
 		EE5AA3321D9A7AAA0098D596 /* HotelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelsViewController.h; path = Controller/HotelsViewController/HotelsViewController.h; sourceTree = "<group>"; };
 		EE5AA3331D9A7AAA0098D596 /* HotelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelsViewController.m; path = Controller/HotelsViewController/HotelsViewController.m; sourceTree = "<group>"; };
-		EE5AA3351D9A7ABE0098D596 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactViewController.h; path = Controller/ContactViewController/ContactViewController.h; sourceTree = "<group>"; };
-		EE5AA3361D9A7ABE0098D596 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactViewController.m; path = Controller/ContactViewController/ContactViewController.m; sourceTree = "<group>"; };
 		EE5AA3381D9A7AD00098D596 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Controller/ProfileViewController/ProfileViewController.h; sourceTree = "<group>"; };
 		EE5AA3391D9A7AD00098D596 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Controller/ProfileViewController/ProfileViewController.m; sourceTree = "<group>"; };
 		EE5AA33C1D9A7AEB0098D596 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagesViewController.h; path = Controller/MessagesViewController/MessagesViewController.h; sourceTree = "<group>"; };
@@ -125,7 +138,16 @@
 		EE5AA3561D9A8A110098D596 /* SideMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideMenuModel.m; path = Model/SideMenuModel/SideMenuModel.m; sourceTree = "<group>"; };
 		EE5AA3591D9A8BD20098D596 /* SideMenuConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideMenuConfiguration.h; path = Controller/SideMenuController/SideMenuConfiguration/SideMenuConfiguration.h; sourceTree = "<group>"; };
 		EE5AA35A1D9A8BD20098D596 /* SideMenuConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideMenuConfiguration.m; path = Controller/SideMenuController/SideMenuConfiguration/SideMenuConfiguration.m; sourceTree = "<group>"; };
-		EE5AA35C1D9A8DCA0098D596 /* SideMenuConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SideMenuConstant.h; path = UtilitiesFile/SideMenuConstant.h; sourceTree = "<group>"; };
+		EE6757F81DA23FDF004B8624 /* TPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPError.h; path = Model/TPError/TPError.h; sourceTree = "<group>"; };
+		EE6757F91DA23FDF004B8624 /* TPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPError.m; path = Model/TPError/TPError.m; sourceTree = "<group>"; };
+		EE6757FB1DA2400A004B8624 /* HotelSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelSearchResult.h; path = Model/TPAPIResponse/HotelSearchResult/HotelSearchResult.h; sourceTree = "<group>"; };
+		EE6757FC1DA2400A004B8624 /* HotelSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelSearchResult.m; path = Model/TPAPIResponse/HotelSearchResult/HotelSearchResult.m; sourceTree = "<group>"; };
+		EE6757FE1DA2403F004B8624 /* HotelSearchRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelSearchRequestData.h; path = Model/TPAPIRequest/HotelSearchRequestData/HotelSearchRequestData.h; sourceTree = "<group>"; };
+		EE6757FF1DA2403F004B8624 /* HotelSearchRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelSearchRequestData.m; path = Model/TPAPIRequest/HotelSearchRequestData/HotelSearchRequestData.m; sourceTree = "<group>"; };
+		EE6758041DA24180004B8624 /* HotelSearchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelSearchAPI.h; sourceTree = "<group>"; };
+		EE6758051DA24180004B8624 /* HotelSearchAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelSearchAPI.m; sourceTree = "<group>"; };
+		EE6758081DA26FE4004B8624 /* HotelSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelSearchViewController.h; path = Controller/HotelsViewController/HotelSearchViewController/HotelSearchViewController.h; sourceTree = "<group>"; };
+		EE6758091DA26FE4004B8624 /* HotelSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelSearchViewController.m; path = Controller/HotelsViewController/HotelSearchViewController/HotelSearchViewController.m; sourceTree = "<group>"; };
 		EEAD07661D990EFB0006447F /* TravelPass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelPass.xcdatamodel; sourceTree = "<group>"; };
 		EEAD07681D990F6D0006447F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EEAD076D1D9912260006447F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = View/Storyboard/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,10 +155,13 @@
 		EEAD07711D9912560006447F /* Hotel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Hotel.storyboard; path = View/Storyboard/Hotel.storyboard; sourceTree = "<group>"; };
 		EEAD07771D991EB20006447F /* UIViewController+CustomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CustomVC.h"; path = "UtilitiesFile/Categories/UIViewController+CustomVC.h"; sourceTree = "<group>"; };
 		EEAD07781D991EB20006447F /* UIViewController+CustomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CustomVC.m"; path = "UtilitiesFile/Categories/UIViewController+CustomVC.m"; sourceTree = "<group>"; };
+		EECD3FB21D9D4E0300C66562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EEDBB7C71D95455400CF92D5 /* SideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideMenuController.h; path = Controller/SideMenuController/SideMenuController.h; sourceTree = "<group>"; };
 		EEDBB7C81D95455400CF92D5 /* SideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideMenuController.m; path = Controller/SideMenuController/SideMenuController.m; sourceTree = "<group>"; };
 		EEDBB7CB1D956DEB00CF92D5 /* APIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = APIConstant.h; path = UtilitiesFile/APIConstant.h; sourceTree = "<group>"; };
 		EEDBB7CC1D956E1C00CF92D5 /* StoryboardConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StoryboardConstant.h; path = UtilitiesFile/StoryboardConstant.h; sourceTree = "<group>"; };
+		EEE7CD9A1DA3A8BA008ED235 /* HotelListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelListCell.h; path = Controller/HotelsViewController/HotelListCell/HotelListCell.h; sourceTree = "<group>"; };
+		EEE7CD9B1DA3A8BA008ED235 /* HotelListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelListCell.m; path = Controller/HotelsViewController/HotelListCell/HotelListCell.m; sourceTree = "<group>"; };
 		EEFE190A1D95121D00C12B43 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = UtilitiesFile/Alert.h; sourceTree = "<group>"; };
 		EEFE190B1D95121D00C12B43 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = UtilitiesFile/Constant.h; sourceTree = "<group>"; };
 		EEFE19101D95124800C12B43 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = UtilitiesFile/Utility/Utility.h; sourceTree = "<group>"; };
@@ -198,6 +223,33 @@
 				D21A43E7510CD50280C02BB0 /* Pods-TravelPassUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE2AABE81DA521B4006E58D2 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				EE2AABE91DA52296006E58D2 /* Messages.h */,
+				EE2AABEA1DA52296006E58D2 /* Messages.m */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		EE2AABEC1DA54C2E006E58D2 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				EE2AABED1DA54C48006E58D2 /* Paging.h */,
+				EE2AABEE1DA54C48006E58D2 /* Paging.m */,
+			);
+			name = Paging;
+			sourceTree = "<group>";
+		};
+		EE2AABF01DA5554A006E58D2 /* LoadMoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE2AABF11DA55576006E58D2 /* LoadMoreCell.h */,
+				EE2AABF21DA55576006E58D2 /* LoadMoreCell.m */,
+			);
+			name = LoadMoreCell;
 			sourceTree = "<group>";
 		};
 		EE3C80801D9BFD800034269F /* Fonts */ = {
@@ -292,6 +344,10 @@
 		EE4768061D8C220600DE4D5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE2AABEC1DA54C2E006E58D2 /* Paging */,
+				EE6757F01DA23EFB004B8624 /* TPError */,
+				EE6757EF1DA23EE3004B8624 /* TPAPIResponse */,
+				EE6757EE1DA23ED7004B8624 /* TPAPIRequest */,
 				EE5AA3541D9A89DD0098D596 /* SideMenuModel */,
 			);
 			name = Model;
@@ -310,7 +366,6 @@
 			children = (
 				EE5AA32E1D9A7A730098D596 /* SignUpViewController */,
 				EE5AA32D1D9A7A690098D596 /* HotelsViewController */,
-				EE5AA32C1D9A7A550098D596 /* ContactViewController */,
 				EE5AA32B1D9A7A4D0098D596 /* ProfileViewController */,
 				EE5AA32A1D9A7A3C0098D596 /* MessagesViewController */,
 				EE5AA3291D9A7A2B0098D596 /* FavouritesViewController */,
@@ -325,6 +380,7 @@
 			children = (
 				EE3C80801D9BFD800034269F /* Fonts */,
 				EE4767DF1D8C1FEA00DE4D5B /* Assets.xcassets */,
+				EECD3FB31D9D4E0300C66562 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -339,6 +395,7 @@
 		EE47680B1D8C224A00DE4D5B /* UtilitiesFile */ = {
 			isa = PBXGroup;
 			children = (
+				EE2AABE81DA521B4006E58D2 /* Messages */,
 				EEAD07731D991E210006447F /* Categories */,
 				EEDBB7CA1D956DC600CF92D5 /* Constants */,
 				EEFE190F1D95123000C12B43 /* Utility */,
@@ -358,6 +415,7 @@
 		EE47680D1D8C22C300DE4D5B /* ServiceClass */ = {
 			isa = PBXGroup;
 			children = (
+				EE6758021DA24180004B8624 /* TPAPICalls */,
 				EEFE192E1D9516E300C12B43 /* APIErrors */,
 				EEFE192D1D9516DA00C12B43 /* APIParser */,
 				EEFE191D1D9512FF00C12B43 /* APICommunicator */,
@@ -412,20 +470,13 @@
 			name = ProfileViewController;
 			sourceTree = "<group>";
 		};
-		EE5AA32C1D9A7A550098D596 /* ContactViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EE5AA3351D9A7ABE0098D596 /* ContactViewController.h */,
-				EE5AA3361D9A7ABE0098D596 /* ContactViewController.m */,
-			);
-			name = ContactViewController;
-			sourceTree = "<group>";
-		};
 		EE5AA32D1D9A7A690098D596 /* HotelsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EE5AA3321D9A7AAA0098D596 /* HotelsViewController.h */,
-				EE5AA3331D9A7AAA0098D596 /* HotelsViewController.m */,
+				EE2AABF01DA5554A006E58D2 /* LoadMoreCell */,
+				EEE7CD981DA3A87D008ED235 /* HotelListCell */,
+				EE6758071DA26FB0004B8624 /* HotelSearchViewController */,
+				EEE7CD971DA3A866008ED235 /* HotelsViewController */,
 			);
 			name = HotelsViewController;
 			sourceTree = "<group>";
@@ -464,6 +515,76 @@
 				EE5AA35A1D9A8BD20098D596 /* SideMenuConfiguration.m */,
 			);
 			name = SideMenuConfiguration;
+			sourceTree = "<group>";
+		};
+		EE6757EE1DA23ED7004B8624 /* TPAPIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				EE6757F31DA23F69004B8624 /* HotelSearchRequestData */,
+			);
+			name = TPAPIRequest;
+			sourceTree = "<group>";
+		};
+		EE6757EF1DA23EE3004B8624 /* TPAPIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				EE6757F41DA23F7F004B8624 /* HotelSearchResult */,
+			);
+			name = TPAPIResponse;
+			sourceTree = "<group>";
+		};
+		EE6757F01DA23EFB004B8624 /* TPError */ = {
+			isa = PBXGroup;
+			children = (
+				EE6757F81DA23FDF004B8624 /* TPError.h */,
+				EE6757F91DA23FDF004B8624 /* TPError.m */,
+			);
+			name = TPError;
+			sourceTree = "<group>";
+		};
+		EE6757F31DA23F69004B8624 /* HotelSearchRequestData */ = {
+			isa = PBXGroup;
+			children = (
+				EE6757FE1DA2403F004B8624 /* HotelSearchRequestData.h */,
+				EE6757FF1DA2403F004B8624 /* HotelSearchRequestData.m */,
+			);
+			name = HotelSearchRequestData;
+			sourceTree = "<group>";
+		};
+		EE6757F41DA23F7F004B8624 /* HotelSearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				EE6757FB1DA2400A004B8624 /* HotelSearchResult.h */,
+				EE6757FC1DA2400A004B8624 /* HotelSearchResult.m */,
+			);
+			name = HotelSearchResult;
+			sourceTree = "<group>";
+		};
+		EE6758021DA24180004B8624 /* TPAPICalls */ = {
+			isa = PBXGroup;
+			children = (
+				EE6758031DA24180004B8624 /* HotelSearchAPI */,
+			);
+			name = TPAPICalls;
+			path = ServiceClass/TPAPICalls;
+			sourceTree = "<group>";
+		};
+		EE6758031DA24180004B8624 /* HotelSearchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EE6758041DA24180004B8624 /* HotelSearchAPI.h */,
+				EE6758051DA24180004B8624 /* HotelSearchAPI.m */,
+			);
+			path = HotelSearchAPI;
+			sourceTree = "<group>";
+		};
+		EE6758071DA26FB0004B8624 /* HotelSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE6758081DA26FE4004B8624 /* HotelSearchViewController.h */,
+				EE6758091DA26FE4004B8624 /* HotelSearchViewController.m */,
+			);
+			name = HotelSearchViewController;
 			sourceTree = "<group>";
 		};
 		EEAD07731D991E210006447F /* Categories */ = {
@@ -507,10 +628,27 @@
 				EEFE190B1D95121D00C12B43 /* Constant.h */,
 				EEDBB7CB1D956DEB00CF92D5 /* APIConstant.h */,
 				EEDBB7CC1D956E1C00CF92D5 /* StoryboardConstant.h */,
-				EE5AA35C1D9A8DCA0098D596 /* SideMenuConstant.h */,
 				EE3C807F1D9B9E010034269F /* UserDefaultsConstant.h */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		EEE7CD971DA3A866008ED235 /* HotelsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE5AA3321D9A7AAA0098D596 /* HotelsViewController.h */,
+				EE5AA3331D9A7AAA0098D596 /* HotelsViewController.m */,
+			);
+			name = HotelsViewController;
+			sourceTree = "<group>";
+		};
+		EEE7CD981DA3A87D008ED235 /* HotelListCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEE7CD9A1DA3A8BA008ED235 /* HotelListCell.h */,
+				EEE7CD9B1DA3A8BA008ED235 /* HotelListCell.m */,
+			);
+			name = HotelListCell;
 			sourceTree = "<group>";
 		};
 		EEFE19041D95103B00C12B43 /* AppDelegate */ = {
@@ -699,6 +837,7 @@
 				EE4767E01D8C1FEA00DE4D5B /* Assets.xcassets in Resources */,
 				EE5AA34C1D9A7BEC0098D596 /* Profile.storyboard in Resources */,
 				EE5AA3481D9A7BBE0098D596 /* Favourites.storyboard in Resources */,
+				EECD3FB11D9D4E0300C66562 /* Localizable.strings in Resources */,
 				EEAD076F1D9912260006447F /* LaunchScreen.storyboard in Resources */,
 				EE5AA34A1D9A7BCF0098D596 /* Messages.storyboard in Resources */,
 				EE5AA3461D9A7BAE0098D596 /* Itinarary.storyboard in Resources */,
@@ -857,19 +996,27 @@
 				EE5AA33A1D9A7AD00098D596 /* ProfileViewController.m in Sources */,
 				EEAD07791D991EB20006447F /* UIViewController+CustomVC.m in Sources */,
 				EEFE19261D9512FF00C12B43 /* APICommunicator.m in Sources */,
-				EE5AA3371D9A7ABE0098D596 /* ContactViewController.m in Sources */,
 				EEAD07671D990EFB0006447F /* TravelPass.xcdatamodeld in Sources */,
 				EE5AA33E1D9A7AEB0098D596 /* MessagesViewController.m in Sources */,
 				EE4767D51D8C1FEA00DE4D5B /* AppDelegate.m in Sources */,
+				EE67580A1DA26FE4004B8624 /* HotelSearchViewController.m in Sources */,
 				EE5AA35B1D9A8BD20098D596 /* SideMenuConfiguration.m in Sources */,
 				EEFE19271D9512FF00C12B43 /* BaseAPI.m in Sources */,
+				EE2AABEF1DA54C48006E58D2 /* Paging.m in Sources */,
 				EE3C807E1D9B9D940034269F /* UserDefaults.m in Sources */,
 				EE5AA3411D9A7AFC0098D596 /* FavouritesViewController.m in Sources */,
+				EE6758061DA24180004B8624 /* HotelSearchAPI.m in Sources */,
+				EE6757FD1DA2400A004B8624 /* HotelSearchResult.m in Sources */,
 				EE484E051D9CF0B300249ECD /* DataBaseConfiguration.m in Sources */,
 				EE5AA3531D9A7FCE0098D596 /* MenuCell.m in Sources */,
 				EE5AA3441D9A7B0E0098D596 /* ItinararyViewController.m in Sources */,
+				EE2AABF31DA55576006E58D2 /* LoadMoreCell.m in Sources */,
 				EE4767D21D8C1FEA00DE4D5B /* main.m in Sources */,
+				EEE7CD9C1DA3A8BA008ED235 /* HotelListCell.m in Sources */,
+				EE6757FA1DA23FDF004B8624 /* TPError.m in Sources */,
 				EE5AA3571D9A8A110098D596 /* SideMenuModel.m in Sources */,
+				EE2AABEB1DA52296006E58D2 /* Messages.m in Sources */,
+				EE6758001DA2403F004B8624 /* HotelSearchRequestData.m in Sources */,
 				EEDBB7C91D95455400CF92D5 /* SideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,6 +1051,18 @@
 			targetProxy = EE4767F51D8C1FEA00DE4D5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EECD3FB31D9D4E0300C66562 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EECD3FB21D9D4E0300C66562 /* Base */,
+			);
+			name = Localizable.strings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EE4767FB1D8C1FEA00DE4D5B /* Debug */ = {
@@ -972,8 +1131,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nikhil Ambekar (RAARKWRAJS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nikhil Ambekar (RAARKWRAJS)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -990,7 +1149,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "e0e69225-3838-4b36-8f40-84247c5c6808";
+				PROVISIONING_PROFILE = "b8e49354-1d7f-4934-bcfe-11c79c9fc89f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1001,6 +1160,7 @@
 			baseConfigurationReference = 33281A29A5C1D244052F49E0 /* Pods-TravelPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nikhil Ambekar (RAARKWRAJS)";
 				INFOPLIST_FILE = TravelPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1016,13 +1176,15 @@
 			baseConfigurationReference = 5B2CA91E23B8F8014002C1A4 /* Pods-TravelPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nikhil Ambekar (RAARKWRAJS)";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
 				INFOPLIST_FILE = TravelPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samples.TravelPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e0e69225-3838-4b36-8f40-84247c5c6808";
+				PROVISIONING_PROFILE = "b8e49354-1d7f-4934-bcfe-11c79c9fc89f";
 			};
 			name = Release;
 		};

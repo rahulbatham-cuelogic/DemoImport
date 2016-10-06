@@ -7,7 +7,9 @@ target 'TravelPass' do
 
   # Pods for TravelPass
   pod 'MFSideMenu'
-
+  pod 'SDWebImage'
+  pod 'HCSStarRatingView'
+  pod 'MBProgressHUD'
   target 'TravelPassTests' do
     inherit! :search_paths
     # Pods for testing

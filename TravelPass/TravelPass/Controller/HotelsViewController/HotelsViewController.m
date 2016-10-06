@@ -38,7 +38,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     currentPage = 1;
     pageSize = 10;
     totalPage = 1;
@@ -86,7 +85,7 @@
 }
 #pragma mark - API Call
 - (void)getHotelListingWithHUD:(BOOL)isShowHUD{
-    HotelSearchRequestData *objRequest = [[HotelSearchRequestData alloc]init];
+    HotelSearchRequestData *objRequest = [[HotelSearchRequestData alloc]initWithDefaultValues];
    
     NSArray *arrCity_State = [strSearchedLocation componentsSeparatedByString:@","];
     if (arrCity_State.count>0) {
@@ -97,36 +96,13 @@
             objRequest.strStateProvince = strState;
         }
     }
-    
-    objRequest.strAddress = @"3206+Main+St";
-    objRequest.strArrival = @"2016-11-02";
-    objRequest.strClientIPAddress = @"70.22.153.205";
-    objRequest.strClientSessionID = @"bfabae227b3a00a065394d1e9e66a1ce";
-    objRequest.strClientUserAgent = @"";
-    objRequest.strCountry = @"US";
-    objRequest.strCurrency = @"USD";
-    objRequest.strDaparture = @"2016-11-03";
-    objRequest.strLandmark = @"";
-    objRequest.strLanguage = @"en-US";
-    objRequest.strLatitude = @"38.9581686";
-    objRequest.strLongitude = @"-76.2102288";
-    objRequest.strName = @"Hilton+Garden+Inn+Kent";
-    objRequest.strPage = [NSString stringWithFormat:@"%d",currentPage];
-    objRequest.strPageSize = @"10";
-    objRequest.strPostalCode = @"21638";
-    objRequest.strRooms = @"rooms%5B%5D%5Badults%5D%3D1";
-    objRequest.strSearch_order = @"OTA-FIRST";
-    objRequest.strSearchRadius = @"50";
-    objRequest.strSearchRadiusUnit = @"MI";
-    objRequest.strSort = @"PROXIMITY";
-    objRequest.strSource = @"Not+Assigned+-+Cyclops";
-    objRequest.strTracker = @"7c1b6ce8-6c2d-11e6-a6c5-021e9d5a8a13";
-    objRequest.strAllHotels = @"true";
+    objRequest.strPage = [NSString stringWithFormat:@"%d",currentPage]; //
     
     if (isShowHUD) {
         [APPDELEGATE showProgressHUDInView:self.view];
     }
     lblEmptyListMessage.hidden = YES;
+    // API call
     [HotelSearchAPI callHoteListAPIWithRequest:objRequest andResponse:^(NSArray *response,Paging *objPage,NSError *error) {
         if (!error) {
             [arrHotelsList addObjectsFromArray:response];
@@ -140,8 +116,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [tblVHotelListing reloadData];
             });
-        }
-        else {
+        }else {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [arrHotelsList removeAllObjects];
                 [tblVHotelListing reloadData];
@@ -199,7 +174,6 @@
         NSString *strImageURL = @"";
         if (objHotel.arrImages.count>0) {
             strImageURL = [objHotel.arrImages objectAtIndex:0];
-            // "//media.int.travelpass.com/hotel/5f6555b/0/:size"
             strImageURL = [NSString stringWithFormat:@"http:%@",strImageURL];
             strImageURL = [strImageURL stringByReplacingOccurrencesOfString:@":size" withString: [NSString stringWithFormat:@"%dx140",(int)tblVHotelListing.frame.size.width]];
         }
@@ -224,14 +198,4 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

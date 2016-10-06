@@ -46,7 +46,7 @@
 #define WITH_SOCIAL_MEDIA @"WITH_SOCIAL_MEDIA"
 #define OR @"OR"
 #define CONTINUE @"CONTINUE"
-#define DO_THIS_LATER @"DO THIS LATER"
+#define DO_THIS_LATER @"DO_THIS_LATER"
 #define SIGNIN @"SIGNIN"
 
 #endif /* Constant_h */

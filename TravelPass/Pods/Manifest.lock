@@ -1,12 +1,23 @@
 PODS:
+  - HCSStarRatingView (1.4.5)
+  - MBProgressHUD (1.0.0)
   - MFSideMenu (0.5.5)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - HCSStarRatingView
+  - MBProgressHUD
   - MFSideMenu
+  - SDWebImage
 
 SPEC CHECKSUMS:
+  HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MFSideMenu: 268122e6894f2747fc3a2b48578100b232506c60
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 2cc1fef6417aae4efcd54d661e165af719efc4fd
+PODFILE CHECKSUM: a635c47f91853bdcd2709143fe6312a734dfb0b5
 
 COCOAPODS: 1.0.1
