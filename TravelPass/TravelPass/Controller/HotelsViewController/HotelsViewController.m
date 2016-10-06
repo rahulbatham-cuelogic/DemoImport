@@ -16,6 +16,7 @@
 #import "Constant.h"
 #import "AppDelegate.h"
 #import "UserDefaults.h"
+#import "Messages.h"
 @interface HotelsViewController ()<hotelSearchDelegate>
 {
     __weak IBOutlet UIView *headerV;
@@ -140,6 +141,13 @@
                 [tblVHotelListing reloadData];
             });
         }
+        else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [arrHotelsList removeAllObjects];
+                [tblVHotelListing reloadData];
+                [Messages showMessage:error.localizedDescription OnViewController:self];
+            });
+        }
         if (isShowHUD) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [APPDELEGATE hideProgresshHUDInView:self.view];
@@ -152,6 +160,8 @@
     strSearchedLocation = strLocation;
 }
 - (void)updatePressed:(id)sender{
+    currentPage = 1;
+    [arrHotelsList removeAllObjects];
     [self showContainerView:NO];
     [self getHotelListingWithHUD:YES];
 }
@@ -197,11 +207,11 @@
                                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
         if (objHotel.strStandardPrice) {
             NSAttributedString * title =
-            [[NSAttributedString alloc] initWithString:objHotel.strStandardPrice
+            [[NSAttributedString alloc] initWithString:[objHotel.strStandardPrice stringByReplacingOccurrencesOfString:@"USD" withString:@""]
                                             attributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)}];
             [cell.hotelStandardPrice setAttributedText:title];
         }
-        cell.hotelOfferedPrice.text = objHotel.strAvgPrice;
+        cell.hotelOfferedPrice.text = [objHotel.strAvgPrice stringByReplacingOccurrencesOfString:@"USD" withString:@""];
         cell.hotelName.text = objHotel.strName;
         cell.starRatingView.value = [objHotel.strRating floatValue];
         return cell;

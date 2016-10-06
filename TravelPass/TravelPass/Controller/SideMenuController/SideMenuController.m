@@ -19,13 +19,15 @@
     NSArray *arrMenus; /**< holds the menus data */
 }
 @end
-
+#define defaultSelectedIndex 1
 @implementation SideMenuController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [tblVMenuList reloadData];
     arrMenus = [SideMenuConfiguration configureSideMenuItems];
+    SideMenuModel *sideMenu = [arrMenus objectAtIndex:defaultSelectedIndex];
+    [self setMenuViewControllerFromListObject:sideMenu];
 }
 
 - (void)didReceiveMemoryWarning {

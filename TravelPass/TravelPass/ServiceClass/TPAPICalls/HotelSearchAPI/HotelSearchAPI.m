@@ -71,8 +71,18 @@
     NSDictionary *dictResponse = response;
     if (![[dictResponse objectForKey:@"custom"] isKindOfClass:[NSNull class]]) {
         NSDictionary *dictCustom = [dictResponse objectForKey:@"custom"];
-        objPage.currentPage = [[dictCustom objectForKey:@"next_page"] intValue];
-        objPage.totalPage = [[dictCustom objectForKey:@"total_pages"] intValue];
+        if (![[dictCustom objectForKey:@"next_page"] isKindOfClass:[NSNull class]]) {
+            objPage.currentPage = [[dictCustom objectForKey:@"next_page"] intValue];
+        }
+        else {
+            objPage.currentPage = 1;
+        }
+        if (![[dictCustom objectForKey:@"total_pages"] isKindOfClass:[NSNull class]]) {
+            objPage.totalPage = [[dictCustom objectForKey:@"total_pages"] intValue];
+        }
+        else {
+            objPage.totalPage = 1;
+        }
     }
     return objPage;
 }

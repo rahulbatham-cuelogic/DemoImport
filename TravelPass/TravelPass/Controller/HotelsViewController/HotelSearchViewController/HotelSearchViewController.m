@@ -80,6 +80,7 @@
 }
 - (IBAction)update:(id)sender {
     if (lblSearch.text.length>0) {
+        [_delegate selectedLocation:lblSearch.text];
         [_delegate updatePressed:sender];
     }
     else {
@@ -117,7 +118,6 @@ replacementString:(NSString *)string {
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self showLabelWithString:[arrLocations objectAtIndex:indexPath.row] andIsShowLabel:YES];
-    [_delegate selectedLocation:[arrLocations objectAtIndex:indexPath.row]];
 }
 /*
  #pragma mark - Navigation
