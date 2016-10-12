@@ -755,8 +755,8 @@
                         <outlet property="lblWelcomeNote" destination="Mc7-BO-ehI" id="pWr-Fo-SIz"/>
                         <outlet property="lblWelcomeText" destination="aGB-G7-Q64" id="ehv-l8-eh8"/>
                         <outlet property="lblWithSocialMedia" destination="z2H-CA-9Yd" id="8kH-Hb-uFN"/>
-                        <outlet property="txtEmail" destination="UzE-5q-y1A" id="2Sd-rU-K8e"/>
-                        <outlet property="txtPassword" destination="pFB-aW-H5k" id="3Hh-ff-90G"/>
+                        <outlet property="txtFldEmail" destination="UzE-5q-y1A" id="OC7-v8-OrL"/>
+                        <outlet property="txtFldPassword" destination="pFB-aW-H5k" id="mve-Q2-tzi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -881,7 +881,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="imgVMenuIcons" destination="ybt-9b-Eri" id="JSD-Wl-G6d"/>
+                                            <outlet property="imgViewMenuIcons" destination="ybt-9b-Eri" id="YNU-dy-7NO"/>
                                             <outlet property="lblMenuTitles" destination="E2r-IX-2gc" id="fOE-fq-8C9"/>
                                         </connections>
                                     </tableViewCell>
@@ -946,7 +946,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="tblVMenuList" destination="gIg-SM-ECG" id="Fed-Xq-qRY"/>
+                        <outlet property="tblViewMenuList" destination="gIg-SM-ECG" id="v2R-vS-ghl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAP-7b-jbH" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,7 +15,7 @@
 
 @interface SideMenuController ()
 {
-    IBOutlet UITableView *tblVMenuList;
+    IBOutlet UITableView *tblViewMenuList;
     NSArray *arrMenus; 
 }
 @end
@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [tblVMenuList reloadData];
+    [tblViewMenuList reloadData];
     arrMenus = [SideMenuConfiguration configureSideMenuItems];
     SideMenuModel *sideMenu = [arrMenus objectAtIndex:defaultSelectedIndex];
     [self setMenuViewControllerFromListObject:sideMenu];
@@ -91,7 +91,7 @@
     SideMenuModel *objMenu = [arrMenus objectAtIndex:indexPath.row];
     cell.lblMenuTitles.text = objMenu.strTitle;
     cell.lblMenuTitles.font = [cell.lblMenuTitles.font fontWithSize:cell.lblMenuTitles.font.pointSize*fontScale];
-    [cell.imgVMenuIcons setImage:[UIImage imageNamed:objMenu.strIconName]];
+    [cell.imgViewMenuIcons setImage:[UIImage imageNamed:objMenu.strIconName]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

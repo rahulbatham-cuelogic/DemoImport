@@ -70,7 +70,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="edit:" destination="w3x-Vc-c0Y" eventType="touchUpInside" id="QoC-Be-hYe"/>
+                                            <action selector="editSearchCriteria:" destination="w3x-Vc-c0Y" eventType="touchUpInside" id="uzJ-Tf-FZ7"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyq-gh-Pyr">
@@ -415,7 +415,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="hcsStarRatingView" destination="t6D-3a-1zx" id="a14-vp-H48"/>
-                                            <outlet property="imgVhotelBackground" destination="hTr-QC-RMW" id="0eV-M6-HuF"/>
+                                            <outlet property="imgViewHotelBackground" destination="hTr-QC-RMW" id="eHJ-Tx-QFm"/>
                                             <outlet property="lblHotelName" destination="rCP-7l-Cqb" id="sD1-FB-41R"/>
                                             <outlet property="lblHotelOfferedPrice" destination="9Y5-Am-lah" id="D2i-ac-skM"/>
                                             <outlet property="lblHotelStandardPrice" destination="SoR-dj-ebW" id="09X-zy-QMr"/>
@@ -428,7 +428,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-9h-cXd">
+                                                <activityIndicatorView opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-9h-cXd">
                                                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
@@ -556,11 +556,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="containerView" destination="wht-JY-EpD" id="gUD-Yl-duR"/>
-                        <outlet property="endDate" destination="jyq-gh-Pyr" id="OHh-cB-BGu"/>
-                        <outlet property="headerV" destination="3Ma-DC-HXD" id="hUR-UI-FPb"/>
                         <outlet property="lblEmptyListMessage" destination="oa5-ah-mf2" id="LK7-fO-c8U"/>
-                        <outlet property="startDate" destination="gov-Ws-RAx" id="yHf-25-Esp"/>
-                        <outlet property="tblVHotelListing" destination="xLk-br-Oyv" id="oy8-5e-D7X"/>
+                        <outlet property="lblEndDate" destination="jyq-gh-Pyr" id="zDQ-NL-rHb"/>
+                        <outlet property="lblStartDate" destination="gov-Ws-RAx" id="PNE-Fs-CTt"/>
+                        <outlet property="tblViewHotelListing" destination="xLk-br-Oyv" id="cqD-0g-HSh"/>
+                        <outlet property="viewHeader" destination="3Ma-DC-HXD" id="gHl-n3-xVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdU-oB-AXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -894,9 +894,9 @@
                     <connections>
                         <outlet property="busyActivityView" destination="wIS-Ye-4Da" id="4Un-0D-dhs"/>
                         <outlet property="lblSearch" destination="mf3-xd-CUa" id="vGX-zU-UxJ"/>
-                        <outlet property="tblVLocationList" destination="md1-X1-3N6" id="sEx-ob-mSI"/>
-                        <outlet property="txtFSearch" destination="ygQ-0G-7Lc" id="gex-Be-St6"/>
-                        <outlet property="vwSearch" destination="Rp9-tX-rD0" id="3f2-AJ-7mI"/>
+                        <outlet property="tblViewLocationList" destination="md1-X1-3N6" id="wv0-Rf-bD7"/>
+                        <outlet property="txtFldSearch" destination="ygQ-0G-7Lc" id="Auu-AT-LYi"/>
+                        <outlet property="viewSearch" destination="Rp9-tX-rD0" id="gvf-Lg-9P2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tux-kC-wze" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,12 +13,12 @@
 @interface HotelSearchViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     
-    __weak IBOutlet UIView *vwSearch;
-    __weak IBOutlet UITableView *tblVLocationList;
+    __weak IBOutlet UIView *viewSearch;
+    __weak IBOutlet UITableView *tblViewLocationList;
     NSArray *arrLocations;
     HotelSearchAPI *objSearchAPI;
     __weak IBOutlet UIActivityIndicatorView *busyActivityView;
-    __weak IBOutlet UITextField *txtFSearch;
+    __weak IBOutlet UITextField *txtFldSearch;
     __weak IBOutlet UILabel *lblSearch;
 
 }
@@ -48,7 +48,7 @@
         if (!error) {
             arrLocations = response;
             dispatch_async(dispatch_get_main_queue(), ^{
-                [tblVLocationList reloadData];
+                [tblViewLocationList reloadData];
             });
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -58,16 +58,16 @@
 }
 
 - (void)showPlaceHolderWithString:(NSString *)strLocation andIsShowPlaceHolder:(BOOL)isShowPlaceHolder{
-    tblVLocationList.hidden = isShowPlaceHolder;
+    tblViewLocationList.hidden = isShowPlaceHolder;
     strLocation = [strLocation stringByTrimmingCharactersInSet:
                         [NSCharacterSet whitespaceCharacterSet]];
 
     if (isShowPlaceHolder) {
-        txtFSearch.text = @"";
+        txtFldSearch.text = @"";
         lblSearch.text = strLocation;
-        [txtFSearch resignFirstResponder];
+        [txtFldSearch resignFirstResponder];
     }else {
-        txtFSearch.text = strLocation;
+        txtFldSearch.text = strLocation;
         lblSearch.text = @"";
     }
 }

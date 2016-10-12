@@ -18,8 +18,8 @@
     __weak IBOutlet UILabel *lblSignUp;
     __weak IBOutlet UILabel *lblWithSocialMedia;
     __weak IBOutlet UILabel *lblOr;
-    __weak IBOutlet UITextField *txtEmail;
-    __weak IBOutlet UITextField *txtPassword;
+    __weak IBOutlet UITextField *txtFldEmail;
+    __weak IBOutlet UITextField *txtFldPassword;
     __weak IBOutlet UIButton *btnContinue;
     __weak IBOutlet UIButton *btnDoThisLater;
     __weak IBOutlet UIButton *btnSignIn;
@@ -50,8 +50,8 @@
     lblSignUp.text = NSLocalizedString(SIGNUP, nil);
     lblWithSocialMedia.text = NSLocalizedString(WITH_SOCIAL_MEDIA, nil);
     lblOr.text = NSLocalizedString(OR, nil);
-    txtEmail.placeholder = NSLocalizedString(@"EMAIL", nil);
-    txtPassword.placeholder = NSLocalizedString(@"PASSWORD", nil);
+    txtFldEmail.placeholder = NSLocalizedString(@"EMAIL", nil);
+    txtFldPassword.placeholder = NSLocalizedString(@"PASSWORD", nil);
     [btnContinue setTitle:NSLocalizedString(CONTINUE, nil) forState:UIControlStateNormal];
     [btnDoThisLater setTitle:NSLocalizedString(DO_THIS_LATER, nil) forState:UIControlStateNormal];
     [btnSignIn setTitle:NSLocalizedString(SIGNIN, nil) forState:UIControlStateNormal];
@@ -62,8 +62,8 @@
     lblSignUp.font = [lblSignUp.font fontWithSize:lblSignUp.font.pointSize*fontScale];
     lblWithSocialMedia.font = [lblWithSocialMedia.font fontWithSize:lblWithSocialMedia.font.pointSize*fontScale];
     lblOr.font = [lblOr.font fontWithSize:lblOr.font.pointSize*fontScale];
-    txtEmail.font = [txtEmail.font fontWithSize:txtEmail.font.pointSize*fontScale];
-    txtPassword.font = [txtPassword.font fontWithSize:txtPassword.font.pointSize*fontScale];
+    txtFldEmail.font = [txtFldEmail.font fontWithSize:txtFldEmail.font.pointSize*fontScale];
+    txtFldPassword.font = [txtFldPassword.font fontWithSize:txtFldPassword.font.pointSize*fontScale];
     btnContinue.titleLabel.font = [btnContinue.titleLabel.font fontWithSize:btnContinue.titleLabel.font.pointSize*fontScale];
     btnDoThisLater.titleLabel.font = [btnDoThisLater.titleLabel.font fontWithSize:btnDoThisLater.titleLabel.font.pointSize*fontScale];
     btnSignIn.titleLabel.font = [btnSignIn.titleLabel.font fontWithSize:btnSignIn.titleLabel.font.pointSize*fontScale];

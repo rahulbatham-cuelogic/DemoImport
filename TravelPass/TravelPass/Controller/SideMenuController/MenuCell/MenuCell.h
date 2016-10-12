@@ -10,5 +10,5 @@
 
 @interface MenuCell : UITableViewCell
 @property(nonatomic,weak)IBOutlet UILabel *lblMenuTitles;
-@property(nonatomic,weak)IBOutlet UIImageView *imgVMenuIcons;
+@property(nonatomic,weak)IBOutlet UIImageView *imgViewMenuIcons;
 @end

@@ -21,14 +21,14 @@
 
 @interface HotelsViewController ()<HotelSearchDelegate>
 {
-    __weak IBOutlet UIView *headerV;
-    __weak IBOutlet UITableView *tblVHotelListing;
+    __weak IBOutlet UIView *viewHeader;
+    __weak IBOutlet UITableView *tblViewHotelListing;
     __weak IBOutlet UIView *containerView;
     NSMutableArray *arrHotelsList;
     NSString *strSearchedLocation;
     __weak IBOutlet UILabel *lblEmptyListMessage;
-    __weak IBOutlet UILabel *startDate;
-    __weak IBOutlet UILabel *endDate;
+    __weak IBOutlet UILabel *lblStartDate;
+    __weak IBOutlet UILabel *lblEndDate;
     int currentPage;
     int pageSize;
     int totalPage;
@@ -103,8 +103,8 @@
 }
 
 - (void)setHeaderView {
-    headerV.layer.borderWidth = 1.0;
-    headerV.layer.borderColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1].CGColor;
+    viewHeader.layer.borderWidth = 1.0;
+    viewHeader.layer.borderColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1].CGColor;
     
     NSString *text = [NSString stringWithFormat:@"%@\n%@",HOTEL_TITLE,strSearchedLocation];
     // Define general attributes for the entire text
@@ -122,21 +122,21 @@
 }
 
 - (void)showContainerView:(BOOL)isShowContainerView{
-    tblVHotelListing.hidden = isShowContainerView;
+    tblViewHotelListing.hidden = isShowContainerView;
     containerView.hidden = !isShowContainerView;
 }
 
 - (void)setDefaultDates{
-   startDate.text = [Utility getdateString:[NSDate date]];
+   lblStartDate.text = [Utility getDateString:[NSDate date]];
     NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
     dayComponent.day = 1;
     NSCalendar *theCalendar = [NSCalendar currentCalendar];
     NSDate *nextDate = [theCalendar dateByAddingComponents:dayComponent toDate:[NSDate date] options:0];
-    endDate.text = [Utility getdateString:nextDate];
+    lblEndDate.text = [Utility getDateString:nextDate];
 }
 
 #pragma mark - Actions
-- (IBAction)edit:(id)sender {
+- (IBAction)editSearchCriteria:(id)sender {
     [self showContainerView:YES];
 }
 
@@ -159,13 +159,13 @@
                 lblEmptyListMessage.hidden = NO;
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                [tblVHotelListing reloadData];
+                [tblViewHotelListing reloadData];
                 [self setHeaderView];
             });
         }else {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [arrHotelsList removeAllObjects];
-                [tblVHotelListing reloadData];
+                [tblViewHotelListing reloadData];
                 [Messages alertViewWithMessage:error.localizedDescription OnViewController:self];
             });
         }
@@ -206,9 +206,9 @@
     if (objHotel.arrImages.count>0) {
         strImageURL = [objHotel.arrImages objectAtIndex:0];
         strImageURL = [NSString stringWithFormat:@"http:%@",strImageURL];
-        strImageURL = [strImageURL stringByReplacingOccurrencesOfString:@":size" withString: [NSString stringWithFormat:@"%dx140",(int)tblVHotelListing.frame.size.width]];
+        strImageURL = [strImageURL stringByReplacingOccurrencesOfString:@":size" withString: [NSString stringWithFormat:@"%dx140",(int)tblViewHotelListing.frame.size.width]];
     }
-    [cell.imgVhotelBackground sd_setImageWithURL:[NSURL URLWithString:strImageURL]
+    [cell.imgViewHotelBackground sd_setImageWithURL:[NSURL URLWithString:strImageURL]
                                 placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     if (objHotel.strStandardPrice) {
         NSAttributedString * title =
@@ -248,6 +248,8 @@
     }
     else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LoadMoreCellID"];
+        UIActivityIndicatorView *loadMoreActivity = [cell viewWithTag:101];
+        [loadMoreActivity startAnimating];
         [self getHotelListingWithHUD:NO];
         return cell;
     }

@@ -7,19 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-enum menus{
+
+typedef enum menus{
     HOTEL_ENM,
     ITINERARY,
     FAVORITES,
     MESSAGES,
     PROFILE_ENM,
     CONTACTSUPPORT_ENM
-};
+}menus;
 @interface SideMenuModel : NSObject
 @property(nonatomic,strong)NSString *strTitle;
 @property(nonatomic,strong)NSString *strIconName;
 @property(nonatomic,assign)BOOL isHide;
-@property(nonatomic,assign)enum menus enmMenus;
+@property(nonatomic,assign)menus enmMenus;
 
-- (id)initWithTitle:(NSString *)strTitle andIconName:(NSString *)strIconName andMenus:(enum menus)enmMenus andIsHide:(BOOL)isHide;
+- (id)initWithTitle:(NSString *)strTitle andIconName:(NSString *)strIconName andMenus:(menus)enmMenus andIsHide:(BOOL)isHide;
 @end
