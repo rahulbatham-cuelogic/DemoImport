@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  TravelPass
+//
+//  Created by Harshit Dongre on 26/09/16.
+//  Copyright © 2016 Harshit Cuelogic. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "StoryboardConstant.h"
+#import "Constant.h"
+#import "Alert.h"
+#import "APIConstant.h"
+#import "UserDefaultsConstant.h"
+#endif /* PrefixHeader_pch */
