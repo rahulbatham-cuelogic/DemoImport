@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  TravelPass
+
+  Created by Harshit Dongre on 29/09/16.
+  Copyright © 2016 Harshit Cuelogic. All rights reserved.
+*/
+
+// FOR SIGNUP SCREEN
+"WELCOME_TO_TRAVELPASS!" = "Welcome to TravelPass!";
+"WELCOME_NOTE" = "The best deals on the most hotels worldwide. We even search for lower rates after you book to try and save you even more. Book today!";
+"SIGNUP" = "SIGN UP";
+"WITH_SOCIAL_MEDIA" = "with social media";
+"OR" = "or";
+"CONTINUE" = "CONTINUE";
+"DO_THIS_LATER" = "Do this later";
+"SIGNIN" = "Sign in";
+"EMAIL" = "email";
+"PASSWORD" = "password";
+
+// FOR SIDE MENUS
+"HOTELS" = "Hotels";
+"ITINARARY" = "Itinerary";
+"FAVOURITES" = "Favorites";
+"MESSAGE" = "Messages";
+"PROFILE" = "Profile";
+"CONTACTSUPPORT" = "Contact Support";
+
+// FOR ALERTS
+"REFINE_SEARCH_ALERT" = "Please refine your search to get best deals on hotels worldwide.";
