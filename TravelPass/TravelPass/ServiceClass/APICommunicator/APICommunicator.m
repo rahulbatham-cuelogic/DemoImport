@@ -9,9 +9,11 @@
 #import "APICommunicator.h"
 #import "Reachability.h"
 #import "BaseAPI.h"
+
 @interface APICommunicator()
 @property (nonatomic) Reachability *internetReachability;
 @end
+
 @implementation APICommunicator
 
 + (NSURLSessionDataTask*)callGetMethodWithParams:(NSString *)strParams andResponse:(void (^)(id response, NSError *error))responseBlock {

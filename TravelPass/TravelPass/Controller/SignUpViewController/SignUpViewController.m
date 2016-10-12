@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Utility.h"
 #import "APICommunicator.h"
+
 @interface SignUpViewController ()
 {
     __weak IBOutlet UILabel *lblWelcomeText;
@@ -22,7 +23,6 @@
     __weak IBOutlet UIButton *btnContinue;
     __weak IBOutlet UIButton *btnDoThisLater;
     __weak IBOutlet UIButton *btnSignIn;
-    __weak IBOutlet NSLayoutConstraint *verticalSignUp;
 }
 @end
 
@@ -32,16 +32,17 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
     [self setLanguageString];
-   
-    // Do any additional setup after loading the view.
 }
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - Instance Methods
 - (void)setLanguageString{
     lblWelcomeText.text = NSLocalizedString(WELCOME_TEXT, nil);
@@ -67,19 +68,10 @@
     btnDoThisLater.titleLabel.font = [btnDoThisLater.titleLabel.font fontWithSize:btnDoThisLater.titleLabel.font.pointSize*fontScale];
     btnSignIn.titleLabel.font = [btnSignIn.titleLabel.font fontWithSize:btnSignIn.titleLabel.font.pointSize*fontScale];
 }
+
 #pragma mark - Actions
 - (IBAction)doThisLater:(id)sender {
-    [APPDELEGATE setSideMenuViewAsRootViewContoller]; // will skip this screen and navigate to side menus
+    [APPDELEGATE setSideMenuViewAsRootViewContoller];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -9,16 +9,17 @@
 #import "HotelSearchViewController.h"
 #import "HotelSearchAPI.h"
 #import "Messages.h"
+
 @interface HotelSearchViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     
-    __weak IBOutlet UIView *searchVw;
-    __weak IBOutlet UITableView *tblVLocationList;/**< shows the list of locations */
-    NSArray *arrLocations; /**< holds the location list data*/
-    HotelSearchAPI *objSearchAPI; /**< object to call the search API method of HotelSearchAPI class*/
-    __weak IBOutlet UIActivityIndicatorView *indicatorV; /**< shows that the request is taking place and hides when results get fetched */
-    __weak IBOutlet UITextField *txtSearch; /**< search the locations when start type the locations */
-    __weak IBOutlet UILabel *lblSearch; /**< shows selected text search */
+    __weak IBOutlet UIView *vwSearch;
+    __weak IBOutlet UITableView *tblVLocationList;
+    NSArray *arrLocations;
+    HotelSearchAPI *objSearchAPI;
+    __weak IBOutlet UIActivityIndicatorView *busyActivityView;
+    __weak IBOutlet UITextField *txtFSearch;
+    __weak IBOutlet UILabel *lblSearch;
 
 }
 @end
@@ -37,13 +38,11 @@
 }
 
 #pragma mark - Instance Method
-/**
- * will call the api and returns the search results
- */
+
 - (void)searchLocation:(NSString*)strLocation{
     //dispatch_async(dispatch_get_main_queue(), ^{
-        indicatorV.hidden = NO;
-        [indicatorV startAnimating];
+        busyActivityView.hidden = NO;
+        [busyActivityView startAnimating];
    // });
     [objSearchAPI callSearchAPIWithString:strLocation andResponse:^(NSArray *response,NSError *error) {
         if (!error) {
@@ -53,48 +52,50 @@
             });
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [indicatorV stopAnimating];
+            [busyActivityView stopAnimating];
         });
     }];
 }
-- (void)showLabelWithString:(NSString *)strLocation andIsShowLabel:(BOOL)isShowLabel{
-    tblVLocationList.hidden = isShowLabel;
+
+- (void)showPlaceHolderWithString:(NSString *)strLocation andIsShowPlaceHolder:(BOOL)isShowPlaceHolder{
+    tblVLocationList.hidden = isShowPlaceHolder;
     strLocation = [strLocation stringByTrimmingCharactersInSet:
                         [NSCharacterSet whitespaceCharacterSet]];
 
-    if (isShowLabel) {
-        txtSearch.text = @"";
+    if (isShowPlaceHolder) {
+        txtFSearch.text = @"";
         lblSearch.text = strLocation;
-        [txtSearch resignFirstResponder];
-    }
-    else {
-        txtSearch.text = strLocation;
+        [txtFSearch resignFirstResponder];
+    }else {
+        txtFSearch.text = strLocation;
         lblSearch.text = @"";
     }
 }
 
 #pragma mark - Actions
 - (IBAction)cancel:(id)sender {
-    [_delegate cancelPressed:sender];
+    [_delegate hotelSearchDidCancel:sender];
 }
+
 - (IBAction)update:(id)sender {
     if (lblSearch.text.length>0) {
-        [_delegate selectedLocation:lblSearch.text];
-        [_delegate updatePressed:sender];
-    }
-    else {
-        [Messages showMessage:EMPTYHOTELLIST OnViewController:self];
+        [_delegate hotelSearchLocationDidSelect:lblSearch.text];
+        [_delegate hotelSearchDidUpdate:sender];
+    }else {
+        [Messages alertViewWithMessage:NSLocalizedString(EMPTYHOTELLIST, @"Empty list.")  OnViewController:self];
     }
 }
 #pragma mark - Textfield delegates
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self showLabelWithString:textField.text andIsShowLabel:YES];
+    [self showPlaceHolderWithString:textField.text andIsShowPlaceHolder:YES];
     return [textField resignFirstResponder];
 }
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    [self showLabelWithString:lblSearch.text andIsShowLabel:NO];
+    [self showPlaceHolderWithString:lblSearch.text andIsShowPlaceHolder:NO];
     return YES;
 }
+
 - (BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string {    
@@ -104,16 +105,19 @@ replacementString:(NSString *)string {
     [self searchLocation:substring];
     return YES;
 }
+
 #pragma mark - tableview delegates and datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return arrLocations.count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AutocompleteCellID"];
     cell.textLabel.text = [arrLocations objectAtIndex:indexPath.row];
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self showLabelWithString:[arrLocations objectAtIndex:indexPath.row] andIsShowLabel:YES];
+    [self showPlaceHolderWithString:[arrLocations objectAtIndex:indexPath.row] andIsShowPlaceHolder:YES];
 }
 @end

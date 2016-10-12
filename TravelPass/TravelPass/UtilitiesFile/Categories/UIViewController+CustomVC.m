@@ -10,7 +10,7 @@
 #import "MFSideMenu.h"
 
 @implementation UIViewController (CustomVC)
-#pragma mark -
+
 #pragma mark - UIBarButtonItems
 
 - (void)setupMenuBarButtonItems {
@@ -22,26 +22,40 @@
         self.navigationItem.leftBarButtonItem = [self leftMenuBarButtonItem];
     }
 }
--(void)setNavigationHeaderTitle:(NSString *)strTitle{
+
+- (void)setNavigationHeaderTitle:(NSString *)strTitle {
     UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
+    lbl.numberOfLines = 0;
+    lbl.lineBreakMode = NSLineBreakByWordWrapping;
     lbl.textColor = [UIColor redColor];
     lbl.text = strTitle;
     lbl.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.titleView = lbl;
 }
+
+- (void)setNavigationHeaderTitleAttributedString:(NSMutableAttributedString *)strTitle {
+    UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
+    lbl.numberOfLines = 0;
+    lbl.lineBreakMode = NSLineBreakByWordWrapping;
+    lbl.attributedText = strTitle;
+    lbl.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = lbl;
+}
+
 - (UIBarButtonItem *)leftMenuBarButtonItem {
     return [[UIBarButtonItem alloc]
             initWithImage:[UIImage imageNamed:@"menu-icon.png"] style:UIBarButtonItemStylePlain
             target:self
             action:@selector(leftSideMenuButtonPressed:)];
 }
+
 - (UIBarButtonItem *)backBarButtonItem {
     return [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back-arrow"]
                                             style:UIBarButtonItemStylePlain
                                            target:self
                                            action:@selector(backButtonPressed:)];
 }
-#pragma mark -
+
 #pragma mark - UIBarButtonItem Callbacks
 
 - (void)backButtonPressed:(id)sender {

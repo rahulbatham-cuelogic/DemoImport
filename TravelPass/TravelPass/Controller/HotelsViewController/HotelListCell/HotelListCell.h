@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "HCSStarRatingView.h"
 @interface HotelListCell : UITableViewCell
-@property(nonatomic,weak)IBOutlet UILabel *hotelName;
-@property(nonatomic,weak)IBOutlet UILabel *hotelStandardPrice;
-@property(nonatomic,weak)IBOutlet UILabel *hotelOfferedPrice;
-@property(nonatomic,weak)IBOutlet UIImageView *hotelBackgroundImage;
-@property(nonatomic,weak)IBOutlet HCSStarRatingView *starRatingView;
+@property(nonatomic,weak)IBOutlet UILabel *lblHotelName;
+@property(nonatomic,weak)IBOutlet UILabel *lblHotelStandardPrice;
+@property(nonatomic,weak)IBOutlet UILabel *lblHotelOfferedPrice;
+@property(nonatomic,weak)IBOutlet UIImageView *imgVhotelBackground;
+@property(nonatomic,weak)IBOutlet HCSStarRatingView *hcsStarRatingView;
 @end

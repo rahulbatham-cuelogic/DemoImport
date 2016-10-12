@@ -10,5 +10,5 @@
 #define Alert_h
 
 #define ALERT @"Alert!"
-#define EMPTYHOTELLIST @"Please refine your search to get best deals on hotels worldwide."
+#define EMPTYHOTELLIST @"REFINE_SEARCH_ALERT"
 #endif /* Alert_h */

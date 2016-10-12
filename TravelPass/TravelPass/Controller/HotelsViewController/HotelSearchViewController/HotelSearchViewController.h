@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol hotelSearchDelegate
-- (void)selectedLocation:(NSString *)strLocation; /**< called when tap on any location on location list*/
-- (void)cancelPressed:(id)sender; /**< cancel button pressed*/
-- (void)updatePressed:(id)sender; /**< update button pressed*/
+@protocol HotelSearchDelegate
+- (void)hotelSearchLocationDidSelect:(NSString *)strLocation;
+- (void)hotelSearchDidCancel:(id)sender;
+- (void)hotelSearchDidUpdate:(id)sender;
 
 @end
 @interface HotelSearchViewController : UIViewController
-@property(nonatomic,unsafe_unretained)id<hotelSearchDelegate> delegate; /**< delegate instance */
+@property(nonatomic,unsafe_unretained)id<HotelSearchDelegate> delegate; 
 @end

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuCell : UITableViewCell
-@property(nonnull,strong)IBOutlet UILabel *lblMenuTitles; /**< to show the menu's titles */
-@property(nonnull,strong)IBOutlet UIImageView *imgMenuIcons; /**< to show the image icons for menu's titles */
+@property(nonatomic,weak)IBOutlet UILabel *lblMenuTitles;
+@property(nonatomic,weak)IBOutlet UIImageView *imgVMenuIcons;
 @end

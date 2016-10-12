@@ -797,6 +797,7 @@
 				TargetAttributes = {
 					EE4767CC1D8C1FEA00DE4D5B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Z8WVFFWYQQ;
 					};
 					EE4767E81D8C1FEA00DE4D5B = {
 						CreatedOnToolsVersion = 7.3;
@@ -1131,8 +1132,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Partner Fusion Inc. (Z8WVFFWYQQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Partner Fusion Inc. (Z8WVFFWYQQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1149,7 +1150,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "b8e49354-1d7f-4934-bcfe-11c79c9fc89f";
+				PROVISIONING_PROFILE = "1c980955-246a-4c89-b119-c6cf53bea985";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1161,7 +1162,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nikhil Ambekar (RAARKWRAJS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TravelPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1177,14 +1178,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vikrant Labde (FQWVPRQEN6)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Partner Fusion Inc. (Z8WVFFWYQQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Partner Fusion Inc. (Z8WVFFWYQQ)";
 				INFOPLIST_FILE = TravelPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samples.TravelPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b8e49354-1d7f-4934-bcfe-11c79c9fc89f";
+				PROVISIONING_PROFILE = "1c980955-246a-4c89-b119-c6cf53bea985";
 			};
 			name = Release;
 		};

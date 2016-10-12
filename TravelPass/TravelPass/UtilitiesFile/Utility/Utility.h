@@ -11,4 +11,5 @@
 
 @interface Utility : NSObject
 +(CGFloat) getFontScaleFactor;
++ (NSString*)getdateString:(NSDate*)date;
 @end

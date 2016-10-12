@@ -15,11 +15,13 @@
 
 @interface SideMenuController ()
 {
-    IBOutlet UITableView *tblVMenuList;/**< shows the list of the side menu*/
-    NSArray *arrMenus; /**< holds the menus data */
+    IBOutlet UITableView *tblVMenuList;
+    NSArray *arrMenus; 
 }
 @end
+
 #define defaultSelectedIndex 1
+
 @implementation SideMenuController
 
 - (void)viewDidLoad {
@@ -89,7 +91,7 @@
     SideMenuModel *objMenu = [arrMenus objectAtIndex:indexPath.row];
     cell.lblMenuTitles.text = objMenu.strTitle;
     cell.lblMenuTitles.font = [cell.lblMenuTitles.font fontWithSize:cell.lblMenuTitles.font.pointSize*fontScale];
-    [cell.imgMenuIcons setImage:[UIImage imageNamed:objMenu.strIconName]];
+    [cell.imgVMenuIcons setImage:[UIImage imageNamed:objMenu.strIconName]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

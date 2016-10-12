@@ -28,9 +28,7 @@
         [self setSignUpViewAsRootViewController];
     }
 }
-/**
- * Will set side menu as root view controller
- */
+
 -(void)setSideMenuViewAsRootViewContoller{
     UINavigationController *navigationController =[[UINavigationController alloc]initWithRootViewController:INTANTIATE_HOTELSTORYBOARD(STORYBOARD_HOTELCONTROLLER)];
     SideMenuController *leftMenuViewController = INTANTIATE_MAINSTORYBOARD(STORYBOARD_SIDEMENUCONTROLLER);
@@ -40,9 +38,7 @@
                                                     rightMenuViewController:nil];
     self.window.rootViewController = container;
 }
-/**
- * Will set SignUp as root view controller
- */
+
 -(void)setSignUpViewAsRootViewController{
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController: INTANTIATE_MAINSTORYBOARD(STORYBOARD_SIGNUPCONTROLLER)];
     self.window.rootViewController = navigationController;
@@ -52,9 +48,11 @@
 - (void)showProgressHUDInView:(UIView*)containerV {
    [MBProgressHUD showHUDAddedTo:containerV animated:YES];
 }
+
 - (void)hideProgresshHUDInView:(UIView*)containerV {
     [MBProgressHUD hideHUDForView:containerV animated:YES];
 }
+
 #pragma mark - Application delegates
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

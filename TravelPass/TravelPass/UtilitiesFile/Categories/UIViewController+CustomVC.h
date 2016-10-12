@@ -10,5 +10,6 @@
 
 @interface UIViewController (CustomVC)
 - (void)setupMenuBarButtonItems;
--(void)setNavigationHeaderTitle:(NSString *)strTitle;
+- (void)setNavigationHeaderTitle:(NSString *)strTitle;
+- (void)setNavigationHeaderTitleAttributedString:(NSMutableAttributedString *)strTitle;
 @end

@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupMenuBarButtonItems]; // will show the left menu bar button to open the side menu
+    [self setupMenuBarButtonItems]; 
     [self setNavigationHeaderTitle:FAVORITES_TITLE];
 }
 

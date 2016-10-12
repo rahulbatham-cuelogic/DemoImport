@@ -25,6 +25,5 @@
 @property(nonatomic,strong)NSString *strStandardPrice;
 @property(nonatomic,strong)NSString *strAvgPrice;
 @property(nonatomic,strong)NSString *strRating;
-
 @property(nonatomic,strong)NSArray *arrImages;
 @end

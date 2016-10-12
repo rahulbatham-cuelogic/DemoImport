@@ -10,6 +10,5 @@
 #import "SideMenuModel.h"
 @class UIViewController;
 @interface SideMenuConfiguration : NSObject
-
-+(NSArray*)configureSideMenuItems;
++ (NSArray*)configureSideMenuItems;
 @end

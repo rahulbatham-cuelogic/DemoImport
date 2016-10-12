@@ -12,9 +12,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property(nonatomic,assign)BOOL isLoggedIn; /**< return YES if user logged in else retur NO*/
--(void)setSideMenuViewAsRootViewContoller; /**< Will set side menu as root view controller*/
-- (void)showProgressHUDInView:(UIView*)containerV; /**< show progress indicator */
-- (void)hideProgresshHUDInView:(UIView*)containerV; /**< hide progress indicator */
+@property(nonatomic,assign)BOOL isLoggedIn;
+-(void)setSideMenuViewAsRootViewContoller;
+- (void)showProgressHUDInView:(UIView*)containerV;
+- (void)hideProgresshHUDInView:(UIView*)containerV;
 @end
 

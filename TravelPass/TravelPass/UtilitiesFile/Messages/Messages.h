@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface Messages : NSObject
-+ (void)showMessage:(NSString *)strMsg OnViewController:(UIViewController*)controller;
++ (void)alertViewWithMessage:(NSString *)strMsg OnViewController:(UIViewController*)controller;
 @end

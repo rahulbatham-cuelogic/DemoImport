@@ -28,4 +28,12 @@
     //NSLog(@"Size : %f and scalefactor : %f",diagonal,scaleFactor);
     return scaleFactor;
 }
++ (NSString*)getdateString:(NSDate*)date {
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"MMMM dd, yyyy"];
+    NSLog(@"My date with out format = %@",date);
+    NSString *dateStr = [format stringFromDate:date];
+    return dateStr;
+}
+
 @end

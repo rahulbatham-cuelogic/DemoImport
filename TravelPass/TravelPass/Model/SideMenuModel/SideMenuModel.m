@@ -9,6 +9,7 @@
 #import "SideMenuModel.h"
 
 @implementation SideMenuModel
+
 - (id)initWithTitle:(NSString *)strTitle andIconName:(NSString *)strIconName andMenus:(enum menus)enmMenus andIsHide:(BOOL)isHide {
     self = [super init];
     if (self) {

@@ -17,9 +17,7 @@
 #define searchAPI @"autocomplete?term="
 
 #pragma mark - AutoComplete
-/**
- * For Autocomplete on hotel location search
- */
+
 - (void)callSearchAPIWithString:(NSString*)strSearch andResponse:(void (^)(NSArray *response,NSError *error))responseBlock {
     NSString *strParams = [NSString stringWithFormat:@"%@%@",searchAPI,strSearch];
     NSString *strURL = [NSString stringWithFormat:@"%@%@",baseURL,strParams];
@@ -38,9 +36,7 @@
         }
     }];
 }
-/**
- * Parsing the response of autocomplete
- */
+
 - (NSArray*)parseSearchLocationWithResponse:(id)response{
     NSLog(@"%@",response);
     NSDictionary *dictCities = response;
@@ -65,6 +61,7 @@
         }
     }];
 }
+
 + (Paging*)parseHotelListingPagination:(id)response {
     Paging *objPage = [[Paging alloc]init];
     // pagination

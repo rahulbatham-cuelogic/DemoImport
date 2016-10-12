@@ -25,3 +25,6 @@
 "MESSAGE" = "Messages";
 "PROFILE" = "Profile";
 "CONTACTSUPPORT" = "Contact Support";
+
+// FOR ALERTS
+"REFINE_SEARCH_ALERT" = "Please refine your search to get best deals on hotels worldwide.";
