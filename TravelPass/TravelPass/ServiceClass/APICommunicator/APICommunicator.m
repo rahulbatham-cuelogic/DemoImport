@@ -7,11 +7,11 @@
 //
 
 #import "APICommunicator.h"
-#import "Reachability.h"
+#import "ReachabilityCheck.h"
 #import "BaseAPI.h"
 
 @interface APICommunicator()
-@property (nonatomic) Reachability *internetReachability;
+@property (nonatomic) ReachabilityCheck *internetReachability;
 @end
 
 @implementation APICommunicator
@@ -28,18 +28,18 @@
     return postDataTask;
 }
 - (void)checkInternet {
-    self.internetReachability = [Reachability reachabilityForInternetConnection];
+    self.internetReachability = [ReachabilityCheck reachabilityForInternetConnection];
     [self.internetReachability startNotifier];
     [self updateInterfaceWithReachability:self.internetReachability];
 }
-- (void)updateInterfaceWithReachability:(Reachability *)reachability {
+- (void)updateInterfaceWithReachability:(ReachabilityCheck *)reachability {
     if (reachability == self.internetReachability)
     {
         [self configurereachability:reachability];
     }
     
 }
-- (void)configurereachability:(Reachability *)reachability {
+- (void)configurereachability:(ReachabilityCheck *)reachability {
     NetworkStatus netStatus = [reachability currentReachabilityStatus];
     BOOL connectionRequired = [reachability connectionRequired];
     NSString* statusString = @"";

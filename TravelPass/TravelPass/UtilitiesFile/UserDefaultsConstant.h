@@ -12,4 +12,6 @@
 #define USERDEFAULT_ISLOGGEDIN @"isloggedin"
 #define USERDEFAULT_LOCATIONCRITERIA @"LocationCriteria"
 #define USERDEFAULT_ISHOTELLISTLOADED @"ishotellistloaded"
+#define USERDEFAULT_USERPROFILE @"lrUserProfile"
+#define USERDEFAULT_ACCESSTOKEN @"lrAccessToken"
 #endif /* UserDefaultsConstant_h */

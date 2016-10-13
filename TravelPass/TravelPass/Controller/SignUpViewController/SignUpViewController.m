@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Utility.h"
 #import "APICommunicator.h"
+#import <LRSDK/LRSDK.h>
 
 @interface SignUpViewController ()
 {
@@ -74,4 +75,14 @@
     [APPDELEGATE setSideMenuViewAsRootViewContoller];
 }
 
+
+- (IBAction)loginWithFacebook:(id)sender {
+    [LoginRadiusSDK socialLoginWithProvider:@"facebook" parameters:@{@"facebookPermissions": @[@"public_profile", @"user_likes"]} inController:self completionHandler:^(BOOL success, NSError *error) {
+        if (success) {
+            [APPDELEGATE setSideMenuViewAsRootViewContoller];
+        } else {
+            NSLog(@"Error: %@", [error description]);
+        }
+    }];
+}
 @end

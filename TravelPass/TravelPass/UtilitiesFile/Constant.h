@@ -9,6 +9,9 @@
 #ifndef Constant_h
 #define Constant_h
 
+#define CLIENT_SITENAME @"travelpass"
+#define API_KEY @"94f297e7-7b5f-4dca-93e8-2a5ccf922344"
+
 #define APPDELEGATE (AppDelegate*)[UIApplication sharedApplication].delegate
 
 #define fontScale  [Utility getFontScaleFactor]

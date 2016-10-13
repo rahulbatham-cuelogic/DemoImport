@@ -88,7 +88,8 @@
                                                 <exclude reference="yID-NZ-3hj"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="112" y="7" width="54" height="16"/>
                                             <mask key="constraints">
                                                 <exclude reference="k85-9Z-drd"/>
                                                 <exclude reference="yID-NZ-3hj"/>
@@ -109,7 +110,8 @@
                                                 <exclude reference="zgl-vq-XK7"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="83" y="8" width="16" height="15"/>
                                             <mask key="constraints">
                                                 <include reference="W2b-rP-E8C"/>
                                                 <include reference="zgl-vq-XK7"/>
@@ -131,7 +133,8 @@
                                                 <exclude reference="bNk-lN-no6"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="10" y="7" width="59" height="16"/>
                                             <mask key="constraints">
                                                 <exclude reference="7To-8t-6rE"/>
                                                 <exclude reference="bNk-lN-no6"/>
@@ -467,8 +470,9 @@
                                 <fontDescription key="fontDescription" name="SFUIText-LightItalic" family="SF UI Text" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <fontDescription key="fontDescription" name="SFUIText-LightItalic" family="SF UI Text" pointSize="16"/>
+                                    <rect key="frame" x="20" y="265" width="280" height="38"/>
                                 </variation>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wht-JY-EpD">

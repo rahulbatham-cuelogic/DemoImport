@@ -17,35 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66y-8F-aKe">
-                                <rect key="frame" x="198" y="165" width="148" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lvS-2X-ZLZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="66y-8F-aKe" firstAttribute="centerY" secondItem="z4a-4F-5en" secondAttribute="centerY" id="92O-Wl-e96"/>
-                            <constraint firstItem="66y-8F-aKe" firstAttribute="centerX" secondItem="z4a-4F-5en" secondAttribute="centerX" id="kO8-5s-qtA"/>
+                            <constraint firstItem="lvS-2X-ZLZ" firstAttribute="top" secondItem="OLO-vc-YJx" secondAttribute="bottom" id="JGt-JC-POY"/>
+                            <constraint firstAttribute="trailing" secondItem="lvS-2X-ZLZ" secondAttribute="trailing" constant="10" id="cCN-66-U5A"/>
+                            <constraint firstItem="lvS-2X-ZLZ" firstAttribute="leading" secondItem="z4a-4F-5en" secondAttribute="leading" constant="10" id="eKC-my-dRb"/>
+                            <constraint firstItem="xoE-ly-cZD" firstAttribute="top" secondItem="lvS-2X-ZLZ" secondAttribute="bottom" constant="8" id="oFD-78-3v6"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lvS-2X-ZLZ"/>
+                            </mask>
                             <mask key="constraints">
-                                <exclude reference="92O-Wl-e96"/>
-                                <exclude reference="kO8-5s-qtA"/>
+                                <exclude reference="JGt-JC-POY"/>
+                                <exclude reference="cCN-66-U5A"/>
+                                <exclude reference="eKC-my-dRb"/>
+                                <exclude reference="oFD-78-3v6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lvS-2X-ZLZ"/>
+                            </mask>
                             <mask key="constraints">
-                                <include reference="92O-Wl-e96"/>
-                                <include reference="kO8-5s-qtA"/>
+                                <include reference="JGt-JC-POY"/>
+                                <include reference="cCN-66-U5A"/>
+                                <include reference="eKC-my-dRb"/>
+                                <include reference="oFD-78-3v6"/>
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtViewUserProfile" destination="lvS-2X-ZLZ" id="8nM-Pm-bgI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XV-Ij-mVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="48"/>
+            <point key="canvasLocation" x="562.5" y="48"/>
         </scene>
     </scenes>
 </document>

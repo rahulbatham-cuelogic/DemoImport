@@ -12,6 +12,7 @@
 #import "StoryboardConstant.h"
 #import "HotelsViewController.h"
 #import "UserDefaults.h"
+#import <LRSDK/LRSDK.h>
 
 @interface AppDelegate ()
 
@@ -57,6 +58,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [LoginRadiusSDK instanceWithAPIKey:API_KEY siteName:CLIENT_SITENAME application:application launchOptions:launchOptions];
     [UserDefaults setLoggedIn:NO]; // set the login variable to No for the first launch
     _isLoggedIn = [UserDefaults isLoggedIn]; // set the login variable to AppDelegate variable
     
